@@ -582,3 +582,32 @@ th {
 .close::after {
     transform: translate(-50%, -50%) rotate(45deg);
 }
+
+.open-block {
+    display: none;
+    top: 80%;
+    right: 10.5%;
+    width: 30px;
+    height: 30px;
+    border: 3px solid #12d661;
+    border-radius: 50px 30px 30px;
+    transition: all 1s ease;
+}
+
+.open-block::after,
+.open-block::before  {
+    content: "";
+    position: absolute;
+    width: 20px;
+    left: 6px;
+    height: 4px;
+    border-top: 1px solid #000;
+    border-bottom: 1px solid #000;
+}
+
+.open-block::after{
+    top: 18px;
+}
+.open-block::before {
+    top: 9px;
+}
