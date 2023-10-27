@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Forms</title>
+</head>
+
+<body>
+    <div class="wrapper" id="wrapper">
+        <h1>Форми</h1>
+        <form method="post" action="php/sendmail.php" class="width form-block">
+            <h2>01. Проста форма</h2>
+            <p>
+                <label><input class='input' type="text" placeholder="Введіть імʼя"></label>
+            </p>
+            <p>
+                <label><input class='input' type="text" placeholder="Email"></label>
+            </p>
+            <p>
+                <label class="badge"><select class='input' name="city" id="">
+                        <option value="">Ваше місто</option>
+                        <option value="">Хмельницкий</option>
+                        <option value="">Київ</option>
+                        <option value="">Львів</option>
+                    </select></label>
+            </p>
+            <p>
+                <label><textarea class='input' name="Email" id="" cols="30" rows="10"
+                        placeholder="Email"></textarea></label>
+            </p>
+            <button type="submit" class="button">Зареєструватися</button>
+        </form>
+        <hr>
+        <form method="post" action="php/sendmail.php" class="form-block">
+            <h2>02. Елементи</h2>
+            <div class="flex">
+                <div class="radio">
+                    <p>
+                        <input type="radio" class="rad" name="radio" id="radio1" checked><label for="radio1">Нова
+                            Пошта</label>
+                    </p>
+                    <p>
+                        <input type="radio" class="rad" name="radio" id="radio2"><label for="radio2">Курʼєр</label>
+                    </p>
+                    <p>
+                        <input type="radio" class="rad" disabled><label class="text-color">Самовивіз</label>
+                    </p>
+                </div>
+                <div class="checkbox">
+                    <p>
+                        <input type="checkbox" class="check" id="check1"><label for="check1">Причитав умови
+                            договору</label>
+                    </p>
+                    <p>
+                        <input type="checkbox" class="check" id="check2"><label for="check2">Згідний з ПДВ 9%</label>
+                    </p>
+                    <p>
+                        <input type="checkbox" class="check" disabled><label class="text-color">Отримувати новини на
+                            ел.пошту</label>
+                    </p>
+                </div>
+                <div class="width2 background">
+                    <ul class="flex">
+                        <li class="text-color">Статус</li>
+                        <li><input type="checkbox" class="check" id="check3"><label for="check3">Новинки</label></li>
+                        <li><input type="checkbox" class="check" id="check4"><label for="check4">Акційні товари</label>
+                        </li>
+                        <li><input type="checkbox" class="check" id="check5"><label for="check5">Розпродаж</label></li>
+                    </ul>
+                    <ul>
+                        <li class="text-color">Дата</li>
+                        <li><input type="date" class="date" value="2018-03-17">
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </form>
+        <hr>
+        <form method="post" accept="php/sendmail.php" class="form-block">
+            <h2>03. Стилізовані чекбокси</h2>
+            <div class="flex">
+                <div class="flex-items">
+                    <p class="retreat-icon"><input type="checkbox" class="check-icon" id="check6"><label
+                            for="check6">Чоловік</label></p>
+                    <p><input type="checkbox" class="check-icon" id="check7"><label for="check7">Жінка</label></p>
+                </div>
+                <div class="flex-items">
+                    <p class="retreat-btn"><input type="checkbox" class="check-btn" id="check8"><label
+                            for="check8">Отримувати новини</label></p>
+                    <p class="retreat-btn"><input type="checkbox" class="check-btn" id="check9"><label
+                            for="check9">Купити додому ковбаси</label></p>
+                    <p><input type="checkbox" class="check-btn" id="check10"><label for="check10">Включити
+                            світло</label></p>
+                </div>
+            </div>
+        </form>
+        <hr>
+        <form method="post" accept="php/sendmail.php" class="doble-form form-block">
+            <h2>04. Форма таблицею</h2>
+            <table>
+                <tr>
+                    <th>Заповніть усі необхідні поля</th>
+                </tr>
+                <tr>
+                    <td>ФІО:</td>
+                    <td>
+                        <p><input type="text" placeholder="Введіть імʼя" class="input"><label for=""></label></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Пароль:</td>
+                    <td><input type="password" placeholder="Введіть не меньше 6 символів" class="input"><label
+                            for=""></label></td>
+                </tr>
+                <tr>
+                    <td>Місто:</td>
+                    <td>
+                        <p><label for="" class="badge"><select name="city" class="input">
+                                    <option value="">Хмельницкий</option>
+                                    <option value="">Київ</option>
+                                    <option value="">Львів</option>
+                                    <option value="">Одеса</option>
+                                </select></label></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Стать:</td>
+                    <td>
+                        <p><input type="radio" name="radio-table" class="rad" id="radio3"><label
+                                for="radio3">Чоловік</label>
+                            <input type="radio" name="radio-table" class="rad" id="radio4" checked><label
+                                for="radio4">Жінка</label></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Фото:</td>
+                    <td>
+                        <p><input type="file" class="file" accept=".png, .jpg, .jpeg" id="file" hidden><label
+                                for="file">Виберіть файл</label></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td rowspan="2">Коментарій:</td>
+                    <td>
+                        <p><textarea class="input" name="" id="" cols="30" rows="10"
+                                placeholder="Введіть тест повідомлення"></textarea></label></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td><button class="button">Зареєструватися</button></label></td>
+                </tr>
+            </table>
+        </form>
+        <hr>
+        <form method="post" accept="php/sendmail.php" class="form-block">
+            <h2>05. Форма таблицею</h2>
+            <table class="width5">
+                <tr>
+                    <th>Оформлення заявки</th>
+                </tr>
+                <tr>
+                    <td>Прізвище та ім’я</td>
+                    <td>Ел. пошта</td>
+                    <td>Телефон</td>
+                </tr>
+                <tr>
+                    <td><label for=""><input type="text" class="input"></label></td>
+                    <td><label for=""><input type="email" class="input"></label></td>
+                    <td><label for=""><input type="tel" class="input"></label></td>
+                </tr>
+                <tr>
+                    <td>Країна</td>
+                    <td>Адреса</td>
+                </tr>
+                <tr>
+                    <td><label for="" class="badge line"> <select name="" id="" class="input">
+                                <option value="">Індонезія</option>
+                            </select></label></td>
+                    <td colspan="2" class="padding-right"><label for=""><input type="text" class="input"></label></td>
+                </tr>
+                <tr>
+                    <td>Місто</td>
+                    <td>Будинок</td>
+                    <td>Поштовий індекс</td>
+                </tr>
+                <tr>
+                    <td><label for=""><input type="text" class="input"></label></td>
+                    <td><label for=""><input type="text" class="input"></label></td>
+                    <td><label for=""><input type="text" class="input"></label></td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <input type="checkbox" class="check" id="check11"><label for="check11">Я погоджуюсь з правилами
+                            оплати та доставки товару</label></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td row><input type="reset" class="button-reset" value="Повернутися назад"></td>
+                    <td></td>
+                    <td class="align-right"><button class="button width-btn">Оформити покупку</button></td>
+                </tr>
+            </table>
+        </form>
+        <form method="post" action="php/sendmail.php" class="fixed" id="formFixed">
+            <h2>06. Фіксована форма</h2>
+            <div class="background width6">
+                <span class="close" id="close"></span>
+                <p><label class="text-сolor" for="">Логін</label><input type="text" class="input"></p>
+                <p><label class="text-сolor" for="">Пароль<input type="text" class="input"></label></p>
+                <a href="#">Забули пароль?</a>
+                <p><input type="checkbox" class="check" id="check15"><label for="check15">Запамʼятати пароль</label></p>
+                <button type="submit" class="button">Увійти</button>
+            </div>
+        </form>
+    </div>
+    <script src="javaskript/script.js"></script>
+</body>
+
+</html>
